@@ -8,5 +8,5 @@ module.exports = {
   autoLoadEntities: true,
   entities: ['dist/entities/*.entity.js'],
   migrations: ['dist/migrations/*.js'],
-  cli: { entitiesDir: 'src/entities', migrationDir: 'src/migrations' },
+  cli: { entitiesDir: '../entities', migrationDir: '../migrations' },
 };

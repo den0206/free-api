@@ -11,14 +11,14 @@ import {
   UseGuards,
   UseInterceptors,
 } from '@nestjs/common';
-import { Item } from 'src/entities/item.entity';
+import { Item } from '../entities/item.entity';
 import { CreateItemDto } from './dto/create-item.dto';
 
 import { ItemsService } from './items.service';
 import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
-import { GetUser } from 'src/auth/decorator/get-user.decorator';
+import { GetUser } from '../auth/decorator/get-user.decorator';
 import { User } from '../entities/user.entity';
-import { Role } from 'src/auth/decorator/role.decorator';
+import { Role } from '../auth/decorator/role.decorator';
 import { UserStatus } from '../auth/user-status.enum';
 import { RolesGuard } from '../auth/guards/roles.guard';
 
