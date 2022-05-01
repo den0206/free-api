@@ -1,5 +1,5 @@
 import { userInfo } from 'os';
-import { ItemStatus } from 'src/items/item.model';
+import { ItemStatus } from '../items/item.model';
 import {
   Column,
   Entity,
