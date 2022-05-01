@@ -1,18 +1,11 @@
 import { Type } from 'class-transformer';
-import {
-  IsInt,
-  IsNotEmpty,
-  isString,
-  IsString,
-  MaxLength,
-  Min,
-} from 'class-validator';
+import { IsInt, IsNotEmpty, IsString, MaxLength, Min } from 'class-validator';
 
 export class CreateItemDto {
   @IsString()
   @IsNotEmpty()
   @MaxLength(40)
-  name: String;
+  name: string;
 
   @IsInt()
   @Min(1)
@@ -21,5 +14,5 @@ export class CreateItemDto {
 
   @IsString()
   @IsNotEmpty()
-  description: String;
+  description: string;
 }

@@ -4,23 +4,23 @@ import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 @Entity()
 export class Item {
   @PrimaryGeneratedColumn('uuid')
-  id: String;
+  id: string;
 
   @Column()
-  name: String;
+  name: string;
 
   @Column()
   price: number;
 
   @Column()
-  description: String;
+  description: string;
 
   @Column()
   status: ItemStatus;
 
   @Column()
-  createdAt: String;
+  createdAt: string;
 
   @Column()
-  updateAt: String;
+  updateAt: string;
 }
