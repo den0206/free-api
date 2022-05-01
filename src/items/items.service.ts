@@ -8,13 +8,12 @@ import { ItemRepositry } from './item.repositry';
 @Injectable()
 export class ItemsService {
   constructor(private readonly itemRepositry: ItemRepositry) {}
-  private items: Item[] = [];
 
   async findAll(): Promise<Item[]> {
     return await this.itemRepositry.find();
   }
 
-  async findById(id: String): Promise<Item> {
+  async findById(id: string): Promise<Item> {
     const item = await this.itemRepositry.findOne({ id });
 
     if (!item) {
@@ -28,7 +27,7 @@ export class ItemsService {
     return await this.itemRepositry.createItem(createItemDto);
   }
 
-  async updateStatus(id: String): Promise<Item> {
+  async updateStatus(id: string): Promise<Item> {
     const item = await this.findById(id);
     item.status = ItemStatus.SOLD_OUT;
     item.updateAt = new Date().toISOString();
@@ -36,7 +35,7 @@ export class ItemsService {
     return item;
   }
 
-  async delete(id: String) {
+  async delete(id: string) {
     const result = await this.itemRepositry.delete({ id });
     return result;
   }

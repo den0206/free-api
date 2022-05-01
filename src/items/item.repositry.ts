@@ -1,6 +1,6 @@
 import { NotFoundException } from '@nestjs/common';
 import { Item } from 'src/entities/item.entity';
-import { DeleteResult, EntityRepository, Repository } from 'typeorm';
+import { EntityRepository, Repository } from 'typeorm';
 import { CreateItemDto } from './dto/create-item.dto';
 import { ItemStatus } from './item.model';
 

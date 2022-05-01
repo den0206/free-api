@@ -1,10 +1,10 @@
 import { Interface } from 'readline';
 
 export interface Item {
-  id: String;
-  name: String;
+  id: string;
+  name: string;
   price: number;
-  description: String;
+  description: string;
   status: ItemStatus;
 }
 
